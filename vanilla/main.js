@@ -8,4 +8,6 @@ const editor = await tinymce.init({
   selector: '#mytextarea'
 })
 
-console.log(editor[0])
+document.getElementById('mybutton').addEventListener('click', () => {
+  console.log(editor[0].getContent());
+})
