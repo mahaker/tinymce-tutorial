@@ -4,9 +4,16 @@ document.querySelector('#app').innerHTML = `
   <h1>Hello TinyMCE!!</h1>
 `
 
+/**
+ * TODO
+ * 1. Editor#setContent
+ * 2. Table plugin
+ */
+
 let editor;
 tinymce.init({
-  selector: '#mytextarea'
+  selector: '#mytextarea',
+  language: 'ja',
 }).then(editors => editor = editors[0]) // editor is only one
 
 document.getElementById('mybutton').addEventListener('click', () => {
