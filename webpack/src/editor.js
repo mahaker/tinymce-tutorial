@@ -31,7 +31,7 @@ import contentCss from 'tinymce/skins/content/default/content.css';
 
 /* Initialize TinyMCE */
 export function render () {
-  tinymce.init({
+  return tinymce.init({
     selector: 'textarea#editor',
     plugins: 'advlist code emoticons link lists table',
     toolbar: 'bold italic | bullist numlist | link emoticons',

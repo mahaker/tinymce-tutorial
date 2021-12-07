@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      title: 'TinyMCE Webpack Demo',
+      title: 'Hello TinyMCE!',
       meta: {viewport: 'width=device-width, initial-scale=1'}
     }),
   ],
