@@ -19,6 +19,9 @@ import 'tinymce/plugins/link';
 import 'tinymce/plugins/lists';
 import 'tinymce/plugins/table';
 
+/* Localization */
+import './langs/ja.js';
+
 /* Import premium plugins */
 /* NOTE: Download separately and add these to /src/plugins */
 /* import './plugins/checklist/plugin'; */
@@ -38,6 +41,7 @@ export function render () {
     skin: false,
     content_css: false,
     content_style: contentUiCss.toString() + '\n' + contentCss.toString(),
+    language: 'ja',
   });
 };
 
