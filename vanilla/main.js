@@ -4,6 +4,8 @@ document.querySelector('#app').innerHTML = `
   <h1>Hello TinyMCE!!</h1>
 `
 
-tinymce.init({
+const editor = await tinymce.init({
   selector: '#mytextarea'
 })
+
+console.log(editor[0])
