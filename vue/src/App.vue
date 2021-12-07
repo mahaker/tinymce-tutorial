@@ -1,15 +1,21 @@
 <script setup>
 import Editor from '@tinymce/tinymce-vue';
+
+let content = "<p>Edit <strong>me</strong>!</p>"
+const onBlur = (event, editor) => content = editor.getContent()
+const log = () => console.log('log', content)
 </script>
 
 <template>
   <div id="app">
     <section>
-      <h1>hello world!</h1>
+      <h1>Hello TinyMCE!</h1>
     </section>
     <section>
       <editor
+        :value="content"
         tinymce-script-src="src/tinymce/tinymce.min.js"
+        @onBlur="onBlur"
         :init="{
           height: 500,
           plugins: [
@@ -24,6 +30,9 @@ import Editor from '@tinymce/tinymce-vue';
           language: `ja`
         }"
       />
+    </section>
+    <section>
+      <button @click="log">getContent</button>
     </section>
   </div>
 </template>
