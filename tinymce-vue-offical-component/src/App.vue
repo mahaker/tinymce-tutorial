@@ -9,6 +9,7 @@ import Editor from '@tinymce/tinymce-vue';
     </section>
     <section>
       <editor
+        tinymce-script-src="src/tinymce/tinymce.min.js"
         :init="{
           height: 500,
           plugins: [
