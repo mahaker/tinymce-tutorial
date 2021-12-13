@@ -1,6 +1,7 @@
-import * as tinymce from './editor';
+import tinymce from 'tinymce';
+import { render } from './editor';
 
-let editor;
+const EDITOR_ID = 'editor';
 
 function heading() {
   const element = document.createElement('h1');
@@ -19,13 +20,13 @@ function getContentButton() {
   element.id = 'getContent';
   element.innerText = 'getContent';
   element.addEventListener('click', () => {
-    console.log(editor.getContent());
+    console.log(tinymce.get(EDITOR_ID).getContent());
   });
   return element;
 }
 
 function renderEditor() {
-  tinymce.render().then(editors => editor = editors[0]);
+  render(EDITOR_ID);
 }
 
 const parent = document.createElement('p');

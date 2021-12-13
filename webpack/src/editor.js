@@ -33,9 +33,9 @@ import contentUiCss from 'tinymce/skins/ui/oxide/content.css';
 import contentCss from 'tinymce/skins/content/default/content.css';
 
 /* Initialize TinyMCE */
-export function render () {
+export function render (id) {
   return tinymce.init({
-    selector: 'textarea#editor',
+    selector: `#${id}`,
     plugins: 'advlist code emoticons link lists table',
     toolbar: 'bold italic | bullist numlist | link emoticons',
     skin: false,
